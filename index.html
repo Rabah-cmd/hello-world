@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Hello World Application</h1>
+    <p id="message">Welcome to the interactive JavaScript app!</p>
+    <button onclick="changeText()">Click Me</button>
+    <p>Enter your name:</p>
+<input type="text" id="userInput" placeholder="Type your name">
+<button onclick="greetUser()">Greet Me</button>
+<p id="greetingMessage"></p>
+    <script>
+        function changeText() {
+            document.getElementById('message').innerText = 'You clicked the button!';
+        }
+
+        function greetUser() {
+            const userName = document.getElementById('userInput').value;
+            document.getElementById('greetingMessage').innerText = `Hello, ${userName}!`;
+        }
+     </script>
+
+     <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
